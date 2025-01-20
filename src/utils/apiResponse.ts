@@ -1,4 +1,4 @@
-export const successResponse = (
+const successResponse = (
   message: string,
   status: number,
   responseData: any = null
@@ -11,9 +11,9 @@ export const successResponse = (
   };
 };
 
-export const errorResponse = (
-  message: string,
-  status: number,
+const errorResponse = (
+  message: string = "Internal server error",
+  status: number = 500,
   responseData: any = null
 ) => {
   return {
@@ -23,3 +23,5 @@ export const errorResponse = (
     responseData,
   };
 };
+
+export { successResponse, errorResponse };
